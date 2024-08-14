@@ -7,20 +7,19 @@ import scipy.stats as stats
 
 
 scale = 3 
-n=1000
-vals = np.random.exponential(scale=scale, size=n)
-print(vals)
+n=500 # cambio1
+vals = np.random.normal(loc=3, scale=1, size=n) # cambio2
 
 # histograma
 count, bins, ignored = plt.hist(x=vals, bins=20, density=True)
 
 scale = 3 
 x = np.arange(0, max(bins), 0.001)
-plt.plot(x, expon.pdf(x, scale=scale), color="orange", lw=2, label='Función Densidad Exponencial')
-
-plt.title('Tiempos de servicio - Distribución Exponencial')
+plt.plot(x, normal.pdf(x, loc=2, scale=1), color="orange", lw=2, label='Función Densidad Normal') # cambio3
+plt.title('Tiempos de servicio - Distribución Normal')
 plt.xlabel('Valores')
 plt.ylabel('Densidad')
 plt.legend()
 plt.show()
+print ("taller2 - D. Normal")# cambio4
 
