@@ -7,13 +7,14 @@ import scipy.stats as stats
 
 
 scale = 3 
-n=500 # cambio1
-vals = np.random.normal(loc=3, scale=1, size=n) # cambio2
+n=300 # cambio1
+vals = np.random.normal(loc=3, scale=1, size=n)
 
 # QQ-plot 
-# Cambio
 
-fig = sm.qqplot(data=vals, dist=stats.norm, scale=3, line="45")
-plt.title('Q-Q Plot para Distribución Exponencial β = 3')
+
+fig = sm.qqplot(data=vals, dist=stats.norm,color = "green", scale=2, line="45") # cambio2
+plt.title('Q-Q Plot para Distribución Exponencial β = 2')
 plt.show()
+
 
