@@ -6,14 +6,14 @@ import statsmodels.api as sm
 import scipy.stats as stats
 
 
-scale = 3 
-n=500 # cambio1
+scale = 2
+n=400 # cambio1
 vals = np.random.normal(loc=3, scale=1, size=n)
 
 # QQ-plot 
 
 
-fig = sm.qqplot(data=vals, dist=stats.norm,color = "green", scale=2, line="45") # cambio2
+fig = sm.qqplot(data=vals, dist=stats.norm,color = "green", scale=1, line="45") # cambio2
 plt.title('Q-Q Plot para Distribución Exponencial β = 2')
 plt.show()
 
