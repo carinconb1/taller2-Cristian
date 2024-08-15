@@ -6,8 +6,8 @@ import statsmodels.api as sm
 import scipy.stats as stats
 
 
-scale = 2
-n=400 # cambio1
+scale = 1
+n=100# cambio1
 vals = np.random.normal(loc=3, scale=1, size=n)
 
 # QQ-plot 
